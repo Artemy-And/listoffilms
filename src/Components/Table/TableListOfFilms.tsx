@@ -10,7 +10,7 @@ import {
     Select,
     Theme
 } from "@material-ui/core";
-import {ModalNewContact} from "./ModalWindows/ModalNewContact";
+import {ModalFilmInfo} from "./ModalWindows/ModalFilmInfo";
 
 import {infoAPI} from "../Api/api";
 import {FavoiriteType} from "./TableContainer";
@@ -27,10 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
-export const TableBigListOfContacts = (props: TablePropsType) => {
+export const TableListOfFilms = (props: TablePropsType) => {
     const classes = useStyles();
     const handleChangeForPopularity = (event: React.ChangeEvent<{ value: unknown }>) => {
-        // setPopularity(event.target.value as string);
         props.setSort(event.target.value as string)
         props.setGenre(event.target.value as string)
     };
@@ -45,7 +44,6 @@ export const TableBigListOfContacts = (props: TablePropsType) => {
                 <Select
                     labelId="demo-simple-select-outlined-label"
                     id="demo-simple-select-outlined"
-                    // value={popularity}
                     onChange={handleChangeForPopularity}
                     label="Popularity"
                 >
@@ -60,7 +58,6 @@ export const TableBigListOfContacts = (props: TablePropsType) => {
                 <Select
                     labelId="demo-simple-select-outlined-label"
                     id="demo-simple-select-outlined"
-                    // value={rating}
                     onChange={handleChangeForPopularity}
                     label="Rating"
                 >
@@ -75,7 +72,6 @@ export const TableBigListOfContacts = (props: TablePropsType) => {
                 <Select
                     labelId="demo-simple-select-outlined-label"
                     id="demo-simple-select-outlined"
-                    // value={rating}
                     onChange={handleChangeForPopularity}
                     label="Rating"
                 >
@@ -90,7 +86,6 @@ export const TableBigListOfContacts = (props: TablePropsType) => {
                 <Select
                     labelId="demo-simple-select-outlined-label"
                     id="demo-simple-select-outlined"
-                    // value={rating}
                     onChange={handleChangeForPopularity}
                     label="Genres"
                 >
@@ -119,7 +114,7 @@ export const TableBigListOfContacts = (props: TablePropsType) => {
                 </Select>
             </FormControl>
             </div>
-            <ModalNewContact
+            <ModalFilmInfo
                 showAdditionalInfo={props.showAdditionalInfo}
                 setShowAdditionalInfo={props.setShowAdditionalInfo}
                              infoAboutFilm={props.infoAboutFilm}
@@ -199,8 +194,6 @@ type TablePropsType = {
     setPreLoader:any
     showAdditionalInfo:boolean
     setShowAdditionalInfo: (value: boolean) => void
-    // totalPages: number | undefined
-    // totalResults: number | undefined
     setCurrentPage: Function
     infoAboutFilm: string
     setInfoAboutFilm: Function

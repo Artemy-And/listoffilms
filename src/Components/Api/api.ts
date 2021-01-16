@@ -31,7 +31,7 @@ export const infoAPI = {
                 return res
             })
     },
-    showFavoiriteMovies(){ 
+    showFavoiriteMovies(){
         return axios.get('https://api.themoviedb.org/3/account/%7Baccount_id%7D/favorite/movies?api_key=4237669ebd35e8010beee2f55fd45546&session_id=3daafbf1bb655d7b9a4d48021ed128381d6d6b40&language=en-US&sort_by=created_at.asc&page=1')
             .then(res=>{
                 return res

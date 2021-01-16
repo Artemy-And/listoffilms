@@ -45,7 +45,7 @@ type ModalNewContactPropsType = {
     showAdditionalInfo: boolean
 }
 
-export const ModalNewContact = (props: ModalNewContactPropsType) => {
+export const ModalFilmInfo = (props: ModalNewContactPropsType) => {
 
     const classes = useStyles();
     return (

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import styles from "./TableContainer.module.css"
 import {BrowserRouter, Route} from "react-router-dom";
-import {TableBigListOfContacts} from "./TableBigListOfContacts";
+import {TableListOfFilms} from "./TableListOfFilms";
 import {infoAPI} from "../Api/api";
 import {ModalFavoiriteFilms} from "./ModalWindows/ModalFavoiriteFilms";
 import {Button} from "@material-ui/core";
@@ -70,7 +70,7 @@ export const TableContainer = () => {
                             />}
                     />
 
-                    <TableBigListOfContacts
+                    <TableListOfFilms
                         setGenre={setGenre}
                         setSort={setSort}
                         setFavoirite={setFavoirite}
