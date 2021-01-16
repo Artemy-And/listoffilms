@@ -8,7 +8,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const customStyles = {
     content: {
-        width: '450px',
+        width: '350px',
         height: '420px',
         display: 'flex',
         top: '50%',
@@ -24,15 +24,17 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             '& .MuiTextField-root': {
-                margin: theme.spacing(1),
-                // margin:'5px',
+                margin: theme.spacing(150),
                 width: '25ch',
+                display: 'flex'
             },
         },
         buttons: {
-
             margin: theme.spacing(1),
-            width: '32ch',
+             width: "100%",
+            marginTop: "4.5rem",
+
+
 
         }
     }),
@@ -56,9 +58,9 @@ export const ModalFilmInfo = (props: ModalNewContactPropsType) => {
         >
             <div className={styles.info}>
                 <Grid container justify="center">
-                    <Grid item xs={4}>
+                    <Grid item xs={8}>
                         <div>
-                            Description of film <b>{props.infoAboutFilm}</b>
+                            <b>Description of film:</b> <p>{props.infoAboutFilm}</p>
                         </div>
                         <Button
                             onClick={() => {
